@@ -5,6 +5,7 @@ __all__ = [
     'print_celery'
 ]
 
+
 def chain_parents(node):
     """
     :param node: A celery.result.AsyncResult object.
@@ -32,6 +33,7 @@ def chain_children(node):
         node = node.children
     yield node
 
+
 def list_of_task_ids_in_a_chain_workflow(res):
     """
     :param res: A celery.result.AsyncResult object
@@ -39,6 +41,7 @@ def list_of_task_ids_in_a_chain_workflow(res):
      The returned list has the same order as the tasks that were involved in the chain workflow.
     """
     return list(reversed([t.id for t in chain_parents(res)]))
+
 
 def print_celery(res):
     l = list_of_task_ids_in_a_chain_workflow(res)
