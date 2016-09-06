@@ -14,3 +14,13 @@ To try out `test_celery`, follow this steps:
 2. In a second terminal, run Redis: `./docker-redis.sh`
 3. In a third terminal, activate the virtualenv `source .venv/bin/activate` and run the Celery Worker: `./celery-worker.sh`
 4. Open a last terminal, activate the virtualenv `source .venv/bin/activate` and run the tasks `python -m test_celery.run_tasks`
+
+## Screenshots
+
+#### RabbitMQ, Redis and Celery Worker running, no tasks have been scheduled yet:
+
+![](./docs/images/screenshoot-scenario-before.png)
+
+#### RabbitMQ, Redis and Celery Worker running, tasks are scheduled and executed:
+
+![](./docs/images/screenshoot-scenario-after.png)
