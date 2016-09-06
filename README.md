@@ -10,9 +10,9 @@ To try out `test_celery`, follow this steps:
 
 ## Run it!
 
-1. Run RabbitMQ `./docker-rabbitmq.sh`
-2. In a second terminal, run Redis: `./docker-redis.sh`
-3. In a third terminal, activate the virtualenv `source .venv/bin/activate` and run the Celery Worker: `./celery-worker.sh`
+1. Run RabbitMQ `./scripts/docker-rabbitmq.sh`
+2. In a second terminal, run Redis: `./scripts/docker-redis.sh`
+3. In a third terminal, activate the virtualenv `source .venv/bin/activate` and run the Celery Worker: `./scripts/celery-worker.sh`
 4. Open a last terminal, activate the virtualenv `source .venv/bin/activate` and run the tasks `python -m test_celery.run_tasks`
 
 ## Screenshots
