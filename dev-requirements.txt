@@ -1,2 +1,3 @@
 # Install ipython to get a nicer shell when playing with Celery-shell
 ipython
+flake8
